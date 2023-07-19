@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script type="text/javascript"
+    src="autoresize.jquery.js"></script>
+</head>
+  
+<body>
+  <script src="script.js"></script>
+  <input type="hidden" name="img" id="imgTag" value="">
+  <div id="bodyDiv">
+    <div class="tab">
+    <button class="tablinks" onclick="openPage(event, 'home')" id="defaultOpen">Home</button>
+    <button class="tablinks" onclick="openPage(event, 'bio')">Bio</button>
+    <button class="tablinks" onclick="openPage(event, 'portfolio')">Portfolio</button>
+    </div>
+    
+    <!-- Tab content -->
+    <div id="home" class="tabcontent">
+      <div id="homeImgLeft">
+<!--         <input type="file" class="formInput" id="imgUrl" name="imgUrl" accept="image/png, image/jpeg"> -->
+      </div>
+      <div id="homeContent">
+        <h1 contenteditable="true">Welcome</h1>
+        <p contenteditable="true">Page info</p>
+      </div>
+      
+    </div>
+    
+    <div id="bio" class="tabcontent">
+      <div id="bioContent">
+        <h1 class="name" contenteditable="true">
+          Your Name Here
+        </h1>
+        <p class="summary" contenteditable="true">
+          Bio Info
+        </p>
+      </div>
+    </div>
+    
+    <div id="portfolio" class="tabcontent">
+    <button id='eventButton' class='custom-btn btn-16' onclick='toggleForm()'>Add Event</button>
+    <input type="text" id="myInput" placeholder="Search for names.." title="Type in a name"></input>
+    <script>
+      $("#myInput").on('keyup', function (e) {
+        if (e.key === 'Enter' || e.keyCode === 13) {
+          search();
+          console.log("enter");
+        }
+      });
+    </script>
+    <div id="sortSelDiv">
+      <select id="sortSel" onchange='sort(this)'>
+        <option value="id">ID</option>
+        <option value="alph">Alphabetical</option>
+      </select>
+    </div>
+    <div class="eventForm">
+      <div class="formContent">
+        <span class="submitButton" onclick='toggleForm()'>Submit</span>
+        <span class="exitButton" id="exitButton" onclick='exitForm()'>Exit</span>
+        <input type="text" class="formInput" id= "titleText" name="title" value="" placeholder="Input title">
+        <textarea type="text" class="formInput" id= "descriptionText" name="description" value="" placeholder="Input description"></textarea>
+        <input type="text" class="formInput" id= "infoText" name="info" value="" placeholder="Input info">
+        <input type="file" class="formInput" id="imgUrl" name="imgUrl" accept="image/png, image/jpeg">
+        <br><img id="myImg" class="myImg" src="#">
+      </div>
+    </div>
+    </div>
+  </div>
+</body>
+  <div class="backdrop"></div>
+
+</html>
