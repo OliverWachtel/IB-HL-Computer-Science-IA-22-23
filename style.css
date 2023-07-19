@@ -1,0 +1,344 @@
+body {
+  background-color: #205C40;
+  height: 100%;
+  width: 98%;
+  display:flex;
+  flex-direction:column;
+  justify-content: center;
+  margin: 1%;
+}
+
+/* Add border around all tabs and tab bar */
+#bodyDiv {
+    border: 3px solid #FFB81F;
+}
+
+/* ---TAB BUTTON------TAB BUTTON------TAB BUTTON------TAB BUTTON------TAB BUTTON--- */
+.tab {
+  overflow: hidden;
+/*   border: 3px solid #FFB81F; */
+  background-color: #ca9116;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-weight: bold;
+  color: #000000;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #FFB81F;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #FFB81F;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: block;
+  padding: 12px 12px;
+/*   border: 3px solid #FFB81F; */
+  border-top: none;
+  color: #FCE2AD;
+  font-family: serif;
+  flex-direction: column;
+}
+
+.tabcontent {
+  animation: fadeEffect 1s; /* Fading effect takes 1 second */
+}
+
+/* Go from zero to full opacity */
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+/* ---TAB BUTTON------TAB BUTTON------TAB BUTTON------TAB BUTTON------TAB BUTTON--- */
+
+
+
+/* ---RECTANGLE BUTTON------RECTANGLE BUTTON------RECTANGLE BUTTON------RECTANGLE BUTTON--- */
+.custom-btn {
+  width: 130px;
+  height: 40px;
+  color: #2a7954;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 900;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  outline: none;
+}
+
+.btn-16 {
+  font-weight: bold;
+  border: none;
+  color: #FCE2AD;
+}
+
+.btn-16:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  direction: rtl;
+  z-index: -1;
+  box-shadow:
+   -7px -7px 20px 0px #fff9,
+   -4px -4px 5px 0px #fff9,
+   7px 7px 20px 0px #0002,
+   4px 4px 5px 0px #0001;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.btn-16:hover {
+  color: #FFB81F;
+}
+
+.btn-16:hover:after {
+  left: auto;
+  right: 0;
+  width: 100%;
+}
+
+.btn-16:active {
+  top: 2px;
+}
+/* ---RECTANGLE BUTTON------RECTANGLE BUTTON------RECTANGLE BUTTON------RECTANGLE BUTTON--- */
+
+
+
+/* ---Bio Formating------Bio Formating------Bio Formating------Bio Formating------Bio Formating--- */
+
+#home, #bio, #portfolio {
+  text-align: center;
+}
+
+/* #home {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+} */
+
+#homeContent, #bioContent {
+  margin:auto;
+  background-color:#205C40;
+  border:solid 3px #FFB81F;
+  box-shadow: -4px -4px 2px #9b7117;
+  margin-top: 4vmin;
+  margin-bottom: 4vmin;
+  overflow:hidden;
+  position:relative;
+  text-align: center;
+  width: 50vw;
+}
+
+h1 {
+  font-family: Lato, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  margin-bottom: 0.8em;
+  text-align: center;
+  font-size: 2.25em;
+}
+
+p {
+  font-family: Lato, sans-serif;
+  letter-spacing: 0.1em;
+  margin-bottom: 4vmin;
+  text-align: center;
+  font-size: .9em;
+}
+
+/* #eventButton {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+} */
+/* ---Bio Formating------Bio Formating------Bio Formating------Bio Formating------Bio Formating--- */
+
+.eventForm {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 80%;
+  height: 80%;
+  display: none;
+  transform: scale(1.1);
+  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+  z-index: 9;
+}
+
+.formContent {
+  position: relative;
+  top: 30%;
+  left: 40%;
+  background-color: #205C40;
+  padding: 1rem 1.5rem;
+  width: 30rem;
+  border-radius: .5rem;
+  border: #FFB81F solid 3px;
+  }
+
+.submitButton {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 3.5rem;
+/*   line-height: 1.5rem; */
+  text-align: center;
+  cursor: pointer;
+  border-radius: .5rem;
+  border-width: 12px;
+  border-color: #FFB81F;
+  background-color: #205C40;
+  color: #FFB81F
+}
+
+.submitButton:hover {
+  background-color: #adadad;
+}
+
+.exitButton {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 3rem;
+/*   line-height: 1.5rem; */
+  text-align: center;
+  cursor: pointer;
+  border-radius: .5rem;
+  border-width: 12px;
+  border-color: #FFB81F;
+  background-color: #205C40;
+  color: #FFB81F
+}
+
+.exitButton:hover {
+  background-color: #adadad;
+}
+
+.show-eventForm {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1.0);
+  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+
+/* panel */
+#shownPanels {
+  text-align: center;
+}
+
+.panel {
+  background-color:#205C40;
+  border:solid 3px #FFB81F;
+  box-shadow: -4px -4px 2px #9b7117;
+/*   height:30vw; */
+  margin:1vmin;
+  margin-top: 4vmin;
+  overflow:hidden;
+  position:relative;
+  width: 50vw;
+  display: flex;
+  flex-direction: row;
+/*   align-items: center; */
+}
+
+.panelLeft, .panelRight {
+  position:relative;
+  background-color:#205C40;
+  width: 25vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.panelRight {
+  align-items: center;
+}
+
+.title, .description, .info{
+  border:solid 3px #FFB81F;
+  box-shadow: -4px -4px 2px #9b7117;
+  padding: 10px;
+  width: 20vw;
+  max-height: 40vh;
+  word-wrap: break-word;
+}
+
+.title, .description {
+  margin: 2vw;
+  margin-bottom: 1vw
+}
+
+.title {
+  text-align: center;
+}
+
+.info {
+  margin: 2vw;
+  margin-bottom: 1vw;
+}
+
+.img {
+  max-width: 20vw;
+  max-height: 20vw;
+  margin: 2vw;
+}
+
+#myInput {
+  width: 60%;
+  font-size: 16px;
+  padding: 9px;
+  margin: 12px;
+  border: 1px solid #ddd;
+  z-index: 9;
+  border-radius: 3px;
+}
+
+#myImg {
+  visibility: hidden;
+}
+
+.backdrop {
+    position: fixed;
+    z-index: 8;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #33333377;
+    backdrop-filter: blur(4px);
+}
+
+.formInput {
+  border:solid 3px #FFB81F;
+  box-shadow: -4px -4px 2px #9b7117;
+  margin: 1vw;
+  padding: 5px;
+  width: 20vw;
+  min-width: 20vw;
+  max-width: 20vw;
+  max-height: 20vh;
+  word-wrap: break-word;
+}
